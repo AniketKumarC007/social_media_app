@@ -14,6 +14,9 @@ import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js" ;
 import { verifyToken } from "./middleware/auth.js";
+import User from "./models/User.js";
+import Post from "./models/Post.js";
+import { users, posts } from "./data/index.js";
 // authentication is basically when u register and login
 // authorization is when u want to make sure someone is logged in so u can perform certain actions 
 //middleware 
