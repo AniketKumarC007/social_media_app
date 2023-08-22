@@ -5,7 +5,9 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 // from the frontend we are going to have to send an object that has these parameters 
 export const register = async (req, res) => {
+  
     try {
+      
       const {
         firstName,
         lastName,
@@ -52,6 +54,7 @@ export const register = async (req, res) => {
 
 /* LOGGING IN */
 export const login = async (req, res) => {
+  // console.log("here");
     try {
       const { email, password } = req.body;
       const user = await User.findOne({ email: email });
