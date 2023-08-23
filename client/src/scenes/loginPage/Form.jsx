@@ -95,13 +95,14 @@ const Form = () => {
       body: JSON.stringify(values),
     });
     const loggedIn = await loggedInResponse.json();
+    console.log("In frontend , form.jsx" , loggedIn ) ;
     // backend se maine login mai res mai bus user aur token bheje thai
   //  res.status(200).json({ token, user });
     onSubmitProps.resetForm();
     if (loggedIn) {
       dispatch(
         setLogin({
-          user: loggedIn.user, //redux state
+          user: loggedIn.user, //redux state // user waise pura ka pura user object aa raha hai 
           token: loggedIn.token,
         })
       );
